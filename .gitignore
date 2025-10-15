@@ -30,3 +30,13 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Excel files
+*.xlsx
+*.xls
+*.xlsm
+*.xlsb
+*.csv
+
+# YAML file
+students.yaml

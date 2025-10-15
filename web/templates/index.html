@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка расписания</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="button-container">
+        <a href="/" class="button">Расписание</a>
+        <a href="/students" class="button">Студенты</a>
+        <a href="#" id="shutdownButton" class="button shutdown">Закрыть программу</a>
+    </div>
+
+    <h1>Ошибки в расписании</h1>
+
+    <div class="form-container">
+        <form id="checkForm">
+            <label for="weekStart">Введите начало недели:</label>
+            <input type="date" id="weekStart" name="weekStart" required>
+            <button type="submit">
+                {{if .IsProcessing}}Проверка выполняется...{{else}}Проверить расписание{{end}}
+            </button>
+        </form>
+    </div>
+
+    <div id="spinner" class="spinner"></div>
+    <div id="result">{{.Report}}</div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

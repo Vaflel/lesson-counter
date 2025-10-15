@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+.button.shutdown {
+    background-color: #dc3545;
+}
+
+.button.shutdown:hover {
+    background-color: #b02a37;
+}
+
+.form-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#checkForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#checkForm label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#checkForm input {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#checkForm button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form:not(#checkForm) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 310px;
+}
+
+.form-row label {
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.form-row input {
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-row button {
+    padding: 10px;
+    width: 310px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 3px solid #000000;/*#ddd*/
+    max-height: 200px;
+    min-height: 200px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+table a {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+table a:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+.spinner {
+    display: none;
+    margin: 20px auto;
+    width: 40px;
+    height: 40px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Стили для таблиц расписания с нарушениями */
+.schedule-table tr {
+    height: 50px;
+    min-height: 50px; /* Гарантирует минимальную высоту строки */
+}
+
+.schedule-table td, .schedule-table th {
+    min-height: 200px; /* Гарантирует высоту ячеек */
+    line-height: 30px; /* Центрирует содержимое по вертикали с учётом padding */
+    box-sizing: border-box; /* Учитывает padding и border в высоте */
+    vertical-align: middle; /* Дополнительно выравнивает содержимое */
+}
