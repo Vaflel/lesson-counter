@@ -51,24 +51,6 @@ func (s ScheduleService) ProcessSchedule(weekStart string) (ValidatingResult, er
 	lessons_repository := infrastructure.NewLessonsRepository(departments, groups, weekStart)
 	lessons, _ := lessons_repository.GetLessons()
 
-	// fmt.Println(".")
-	// fmt.Println(".")
-	// fmt.Println(".")
-	// for idx, _ := range lessons {
-	// 	fmt.Printf(" %03d Дата: %s, Пара: %d, Дисциплина: %s, Студент: %s Преподаватель: %s, Кабинет: %s, Группа: %s\n",
-	// 		idx+1,
-	// 		lesson.Time.DateString(),
-	// 		lesson.Time.Number,
-	// 		lesson.Discipline,
-	// 		lesson.Student,
-	// 		lesson.Teacher,
-	// 		lesson.Cabinet,
-	// 		lesson.Group)
-	// }
-	// fmt.Println(".")
-	// fmt.Println(".")
-	// fmt.Println(".")
-
 	valdator := domain.NewValidator(students, lessons)
 	violations := valdator.ValidateSchedule()
 

@@ -123,7 +123,7 @@ func (v *Validator) calculateGaps(dayLessons []Lesson) int {
 		return 0
 	}
 
-	minSlot := int(^uint(0) >> 1) // max int
+	minSlot := int(^uint(0) >> 1) // max int - очень большая циферь, можно было ставить что-то в районе 15
 	maxSlot := -1
 	occupiedSlots := make(map[int]bool)
 
